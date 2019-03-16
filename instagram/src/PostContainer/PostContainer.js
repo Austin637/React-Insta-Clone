@@ -4,16 +4,23 @@ import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
-    return (
-        <div>
-            <Post post={props.post} />
-            <CommentSection comments={props.post.comments} />
-        </div>
+    return ( <
+        div >
+        <
+        Post post = {
+            props.post
+        }
+        /> <
+        CommentSection comments = {
+            props.post.comments
+        }
+        /> <
+        /div>
     )
 }
 
 PostContainer.propTypes = {
-    post: PropTypes.object
+    post: PropTypes.object.isRequired,
 }
 
 export default PostContainer;
