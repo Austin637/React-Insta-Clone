@@ -5,11 +5,18 @@ import './Posts.css';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
-    return (
-        <div className="post-container">
-            <Post post={props.post} />
-            <CommentSection comments={props.post.comments} />
-        </div>
+    return ( <
+        div className = "post-container" >
+        <
+        Post post = {
+            props.post
+        }
+        /> <
+        CommentSection comments = {
+            props.post.comments
+        }
+        /> <
+        /div>
     )
 }
 
