@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
+      searchedData: [],
       searchTerm: ""
     }
   }
@@ -23,11 +24,14 @@ class App extends Component {
 
   handleSearch = event => {
     event.preventDefault();
+
     this.setState({
       dummyData: this.state.dummyData.filter(post => {
         return post.username.toLowerCase() === this.state.searchTerm.toLowerCase();
       })
     })
+
+
   };
 
   handleChange = event => {
@@ -38,7 +42,7 @@ class App extends Component {
 
 
   render() {
-    console.log(dummyData);
+
     return ( <
       div className = "App" >
       <
@@ -69,6 +73,8 @@ class App extends Component {
       } <
       /div>
     );
+
+
   }
 }
 
