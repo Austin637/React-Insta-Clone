@@ -13,7 +13,9 @@ import {
 import "./SearchBar.css";
 
 import Logo from "../../img/instagram-logo.png";
-const SearchBar = () => {
+
+
+const SearchBar = props => {
     return ( <
         div className = "search-bar" >
         <
@@ -34,16 +36,27 @@ const SearchBar = () => {
         src = {
             Logo
         }
-        /> < /
-        div >
+        /> <
+        /div>
 
         <
         div className = "search-input-container" >
         <
-        input type = "text"
-        placeholder = "Search" / >
+        form onSubmit = {
+            props.handleSearch
+        } >
         <
-        /div> <
+        input type = "text"
+        placeholder = "Search"
+        name = "searchTerm"
+        onChange = {
+            props.handleChange
+        }
+        /> <
+        /form> <
+        /div>
+
+        <
         div className = "search-icons-container" >
         <
         FontAwesomeIcon size = "2x"
@@ -60,8 +73,8 @@ const SearchBar = () => {
         icon = {
             faUser
         }
-        /> < /
-        div > <
+        /> <
+        /div> <
         /div>
     );
 };
