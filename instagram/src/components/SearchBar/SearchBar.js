@@ -34,8 +34,8 @@ const SearchBar = () => {
         src = {
             Logo
         }
-        /> <
-        /div>
+        /> < /
+        div >
 
         <
         div className = "search-input-container" >
@@ -60,8 +60,8 @@ const SearchBar = () => {
         icon = {
             faUser
         }
-        /> <
-        /div> <
+        /> < /
+        div > <
         /div>
     );
 };
