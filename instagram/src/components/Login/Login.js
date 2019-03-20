@@ -7,13 +7,19 @@ const Login = props => {
         } >
         <
         input type = "text"
-        placeholder = "username" / >
-        <
+        placeholder = "username"
+        onChange = {
+            props.handleChange
+        }
+        /> <
         input type = "text"
-        placeholder = "password" / >
-        <
-        button type = "submit" > Login < /button> < /
-        form >
+        placeholder = "password"
+        onChange = {
+            props.handleChange
+        }
+        /> <
+        button type = "submit" > Login < /button> <
+        /form>
     )
 }
 
