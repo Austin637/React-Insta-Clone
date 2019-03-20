@@ -76,14 +76,14 @@ class CommentSection extends React.Component {
       onChange = {
         this.handleChange
       }
-      /> <
-      /form> <
+      /> < /
+      form > <
       FontAwesomeIcon size = "2x"
       icon = {
         faEllipsisH
       }
-      /> <
-      /div> <
+      /> < /
+      div > <
       /div>
     );
   }
