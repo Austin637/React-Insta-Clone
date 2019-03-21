@@ -1,19 +1,22 @@
 import React, {
   Component
 } from 'react';
-import PostsPage from './components/PostContainer/PostsPage';
-import Login from './components/Login/Login';
+
+
 import authenticate from './components/authentication/authenticate';
+
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
-      password: "",
-
+      username: ""
     }
+  }
+
+  componentDidMount() {
+
   }
 
   handleChange = event => {
@@ -22,9 +25,9 @@ class App extends Component {
     });
   };
 
-  login = event => {
+  login = () => {
 
-    localStorage.setItem("username", JSON.stringify(this.state.username))
+    localStorage.setItem("username", JSON.stringify(this.state.username));
 
   }
 
@@ -32,12 +35,12 @@ class App extends Component {
     return ( <
       div className = "App" >
       <
-      Display / > {
-        /* <Login login={this.login} handleChange={this.handleChange} /> */ } <
+      Display / >
+      <
       /div>
     );
   }
 }
 
-const Display = authenticate(PostsPage);
+const Display = authenticate;
 export default App;

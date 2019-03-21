@@ -13,11 +13,8 @@ const Login = props => {
         }
         /> <
         input type = "text"
-        placeholder = "password"
-        onChange = {
-            props.handleChange
-        }
-        /> <
+        placeholder = "password" / >
+        <
         button type = "submit" > Login < /button> <
         /form>
     )
