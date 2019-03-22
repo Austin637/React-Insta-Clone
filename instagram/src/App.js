@@ -1,27 +1,46 @@
-import React, { Component } from 'react';
-import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import React, {
+  Component
+} from 'react';
+
+
+import authenticate from './components/authentication/authenticate';
+
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      username: ""
     }
   }
+
+  componentDidMount() {
+
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  login = () => {
+
+    localStorage.setItem("username", JSON.stringify(this.state.username));
+
+  }
+
   render() {
-    console.log(dummyData);
-    return (
-      <div className="App">
-      <SearchBar />
-        {this.state.dummyData.map(post => {
-          return (<div className="post-container"><PostContainer post={post} key={1 + Math.random()}/></div>);
-        })}
-      </div>
+    return ( <
+      div className = "App" >
+      <
+      Display / >
+      <
+      /div>
     );
   }
 }
 
+const Display = authenticate;
 export default App;

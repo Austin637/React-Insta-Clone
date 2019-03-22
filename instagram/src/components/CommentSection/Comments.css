@@ -1,0 +1,26 @@
+.comments-section {
+    padding: 0 15px 15px;
+    background: white;
+}
+
+.add-comment {
+    margin: 0 15px;
+    padding: 15px 0;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-comment p {
+    color: grey;
+}
+
+.comment {
+    margin-bottom: 8px;
+}
+
+.username-of-comment {
+    font-weight: 800;
+    margin-right: 5px;
+}
